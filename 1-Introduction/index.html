@@ -1,15 +1,38 @@
 <html>
-<head>
-    <title>Title for your website</title>
-</head>
-<body>
-    <div id="hello">
+    <head>
+        <title>To Do List</title>
+    </head>
+    <body>
+        <h1>My To-Do List</h1>
+        <h1>Hello People</h1>
+        <ol>
+            <li id="Bob">Get breakfast</li>
+            <li>Get Lunch</li>
+            <li>Get Supper</li>
+        </ol>
 
-    </div>
-    <script>
-            document.write('<h1>Hello, Javascript!</h1>')
-            let hello = document.getElementById('hello')
-            hello.innerHTML = 'Hello world'
-    </script>
-</body>
-<html>
+        <h1 class="pink">HEllo</h1>
+        <p class="pink">Bye</p>
+        <li class="pink underline">Hello from LI</li>
+
+        <style>
+            h1 {
+                border-color: red; 
+                border-width: 2px; 
+                border-style:double;
+            }
+
+            #Bob {
+                color: green;
+            }
+
+            .pink {
+                color: pink;
+            }
+
+            .underline {
+                text-decoration: underline;
+            }
+        </style>
+    </body>
+</html>
