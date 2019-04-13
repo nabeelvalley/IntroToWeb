@@ -24,7 +24,10 @@
             <h2>ToDo Demo</h2>
         </div>
         <div class="row">
-            <input id="todoInput" type="text">
+            <div class="input-field">
+                <input id="todoInput" type="text">
+                <label class="active" for="todoInput">What do you need to do?</label>
+            </div>
             <button class="waves-effect waves-light btn" onclick="addItem()">Add List Item</button>
         </div>
         <div class="row">
@@ -43,18 +46,20 @@
             // Save the value to a variable
             let todoText = todoInput.value
 
-            // Get the to-do list element
-            let todoList = document.getElementById('todoList')
+            // Test if there is actually come content in the Input Box
+            if(todoText){
+                // Get the to-do list element
+                let todoList = document.getElementById('todoList')
 
-            // Create the HTML for a new item
-            let html = '<li class="collection-item">' + todoText + '</li>'
+                // Create the HTML for a new item
+                let html = '<li class="collection-item">' + todoText + '</li>'
 
-            // Add the new HTML to the to-do list
-            todoList.innerHTML += html
+                // Add the new HTML to the to-do list
+                todoList.innerHTML += html
 
-            // Clear content from the input box
-            todoInput.value = ''
-
+                // Clear content from the input box
+                todoInput.value = ''
+            }
         }
     </script>
 </body>
