@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Counter Demo</title>
+</head>
+
+<body>
+    <div id="app" class="container">
+        <!-- Page Content goes here -->
+        <div class="row">
+            <h2>Counter Demo</h2>
+            <h4>Click the button to increment the counter</h4>
+            <!-- Create a Span that will display the counter -->
+            <h1>Counter Value: <span id="counter"></span></h1>
+            <!-- Add a button to add one to our counter -->
+            <button class="waves-effect waves-light btn" onclick="addOne()">Counter ++</button>
+        </div>
+    </div>
+    <script>
+        // We will write our Javascript in here
+        // Set the initial counter value
+        let counterValue = 0
+
+        let counterElement = document.getElementById('counter')
+        counterElement.innerText = counterValue
+
+        // Function to increment the counter
+        const addOne = function () {
+            let counterElement = document.getElementById('counter')
+            // There are a few different ways we can increment the counter
+            // counterElement.innerText = counterElement.innerText + 1
+            // counterElement.innerText += 1
+            counterElement.innerText++
+        }
+    </script>
+</body>
+
+</html>
