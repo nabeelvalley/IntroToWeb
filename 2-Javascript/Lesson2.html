@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Lesson 2</title>
+    </head>
+    <body>
+        <h1 id="counter"></h1>
+        <button onclick="addOne()">Counter +++</button>
+
+        <div>
+            <input id="todoInput" type="text">
+            <button onclick="addItem()">Add List Item</button>
+        </div>
+        <ol id="todoList">
+            <li>Eat breakfast</li>
+            <li>Eat Lunch</li>
+        </ol>
+
+        <script>
+            let firstValue = 0
+            let counter = document.getElementById('counter')
+            counter.innerText = firstValue
+
+            let addOne = function(){
+                counter.innerText ++
+            }
+
+            let addItem = function(){
+                let todoInput = document.getElementById('todoInput')
+                let todoText = todoInput.value
+
+                let todoList = document.getElementById('todoList')
+                let html = '<li>' + todoText + '</li>'
+
+                console.log(todoList)
+
+                todoList.innerHTML += html
+            }
+        </script>
+    </body>
+</html>
