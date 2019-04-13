@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>JavaScript Demo</title>
+  </head>
+
+  <body>
+        <div id="app" class="container">
+                <!-- Page Content goes here -->
+                <div class="row">
+                    <h2>JavaScript Demo</h2>
+                    <h4>Just a little demo of some stuff we can do with JS</h4>
+                    <h1>Counter Value: <span id="counter"></span></h1>
+                    <button class="waves-effect waves-light btn" onclick="incrementCounter()">Counter ++</button>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input value="Bob" id="first_name2" type="text" class="validate">
+                        <label class="active" for="first_name2">First Name</label>
+                    </div>
+                </div>
+                <div id="to-do-list" class="row"></div>
+        </div>
+        <script>
+            // We will write our Javascript in here
+            let counterValue = 0
+            
+            const initCounter = function(){
+                let counterElement = document.getElementById('counter')
+                counterElement.innerText = counterValue
+            }
+
+            initCounter()
+
+            const incrementCounter = function(){
+                let counterElement = document.getElementById('counter')
+                // counterElement.innerText = counterElement.innerText + 1
+                // counterElement.innerText += 1
+                counterElement.innerText ++
+            }
+        </script>
+  </body>
+</html>
